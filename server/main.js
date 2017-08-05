@@ -1,6 +1,13 @@
-//import './../imports/utils';
-import {greetUser} from './../imports/utils';
-import add from './../imports/math';
+import {Meteor} from 'meteor/meteor';
+import {Players} from './../imports/api/players';
 
-console.log('Log from server/main.js');
-console.log(add(8, 7));
+Meteor.startup(function () {
+  // Players.insert({
+  //   name: 'Herman',
+  //   score: 3
+  // });
+  // console.log(Players.find().fetch());
+  let numbers = [9, 99, 4, 56];
+  let newNumbers = numbers.map((number) => number+1);
+  console.log(newNumbers);
+});
